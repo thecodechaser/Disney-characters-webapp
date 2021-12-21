@@ -38,26 +38,31 @@ header {
   flex-wrap: wrap;
 }
 
+.c-img {
+  height: 300px;
+  width: 258px;
+}
+
 .title-like {
   display: flex;
 }
 
 .char-title {
   margin: 0;
+  width: 90%;
 }
 
 .fa-heart {
   margin-top: 5px;
   font-size: 20px;
-  margin-left: 85px;
 }
 
 .likes {
-  margin-left: 100px;
+  margin-left: 200px;
 }
 
 .comment-btn {
-  margin-left: 30px;
+  margin-left: 84px;
   border: 2px solid #000;
   cursor: pointer;
   padding: 10px 20px;
