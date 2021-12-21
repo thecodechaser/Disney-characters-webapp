@@ -28,6 +28,44 @@ header {
 .menu-item {
   font-size: 20px;
 }
+
+/* main-section */
+
+.cards {
+  margin: 50px 100px;
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.title-like {
+  display: flex;
+}
+
+.char-title {
+  margin: 0;
+}
+
+.fa-heart {
+  margin-top: 5px;
+  font-size: 20px;
+  margin-left: 85px;
+}
+
+.likes {
+  margin-left: 100px;
+}
+
+.comment-btn {
+  margin-left: 30px;
+  border: 2px solid #000;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* footer-section */
+
 .fotter {
   text-align: center;
 }
