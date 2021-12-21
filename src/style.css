@@ -89,3 +89,34 @@ header {
   background-color: #c1c7d0e5;
   backdrop-filter: blur(2px);
 }
+
+.main-popup-container {
+  margin: 50px 100px;
+  height: 85%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa-times {
+  position: absolute;
+  top: 70px;
+  right: 120px;
+  font-size: 30px;
+}
+
+.popup-image {
+  height: 250px;
+  width: 408px;
+  margin-top: 20px;
+}
+
+.popup-title {
+  font-size: 30px;
+}
+
+.popup-details {
+  display: flex;
+  gap: 100px;
+}

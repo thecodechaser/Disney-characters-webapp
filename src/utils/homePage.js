@@ -1,6 +1,5 @@
 import getCharData from './retrieveApis.js';
 
-
 export default async () => {
   const array = await getCharData();
   const container = document.querySelector('.cards');
