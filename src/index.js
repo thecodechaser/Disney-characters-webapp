@@ -1,4 +1,4 @@
 import './style.css';
-import { render } from './utils/homePage.js';
+import render from './utils/homePage.js';
 
 render();
