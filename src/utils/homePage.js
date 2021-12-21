@@ -1,9 +1,19 @@
-import { getCharData } from './retrieveApis.js';
+import getCharData from './retrieveApis.js';
 
-const render = async () => {
+export default async () => {
   const array = await getCharData();
-  const ab = document.querySelector('.char-title');
-  ab.innerHTML = `${array[0].name}`;
+  const container = document.querySelector('.cards');
+  array.forEach((element) => {
+    container.innerHTML += `
+    <div class="card">
+    <img class="c-img" src="${element.imageUrl}" alt="character image"/>
+    <div class="title-like">
+      <h3 class="char-title">${element.name}</h3>
+      <i class="far fa-heart"></i>
+    </div>
+    <p class="likes">5 Likes</p>
+    <button class="comment-btn" data-id="1" type="button">Comment</button>
+   </div>
+    `;
+  });
 };
-
-export { render };
