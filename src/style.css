@@ -6,7 +6,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* header-style */
+/* header-section-style */
 
 header {
   display: flex;
@@ -29,7 +29,7 @@ header {
   font-size: 20px;
 }
 
-/* main-section */
+/* main-section-section */
 
 .cards {
   margin: 50px 100px;
@@ -69,8 +69,23 @@ header {
   border-radius: 5px;
 }
 
-/* footer-section */
+/* footer-section-style */
 
 .fotter {
   text-align: center;
+}
+
+/* comment-popup-style */
+
+.comment-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c1c7d0e5;
+  backdrop-filter: blur(2px);
 }
