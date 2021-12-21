@@ -2,19 +2,18 @@ import render from './homePage.js';
 import getCharData from './retrieveApis.js';
 
 const closePopup = () => {
-    const container = document.querySelector('.comment-popup');
-    container.style.display= 'none';
-}
+  const container = document.querySelector('.comment-popup');
+  container.style.display = 'none';
+};
 
-const eventListners = async () => {
-    const commentButton = await render();
-    const array = await getCharData();
-    const container = document.querySelector('.comment-popup')
-    commentButton.forEach((element) =>{
-        const dataID = element.getAttribute('data-id');
-        element.addEventListener('click', ()=> {
-            container.innerHTML = `
-        
+export default async () => {
+  const commentButton = await render();
+  const array = await getCharData();
+  const container = document.querySelector('.comment-popup');
+  commentButton.forEach((element) => {
+    const dataID = element.getAttribute('data-id');
+    element.addEventListener('click', () => {
+      container.innerHTML = `
             <div class="main-popup-container">
             <img class="popup-image" src="${array[dataID].imageUrl}" alt="character-image"/>
             <i class="fas fa-times"></i>
@@ -29,14 +28,10 @@ const eventListners = async () => {
             </div>
             </div>
             `;
-            container.style.display= 'block';
+      container.style.display = 'block';
 
-            const closeButton = document.querySelector('.fa-times');
-    closeButton.addEventListener('click', closePopup);
-        })
+      const closeButton = document.querySelector('.fa-times');
+      closeButton.addEventListener('click', closePopup);
     });
-// <div class="img-close">
-// </div>
-}
-
-export { eventListners }
+  });
+};

@@ -15,8 +15,6 @@ export default async () => {
     <button class="comment-btn" data-id="${index}" type="button">Comment</button>
    </div>
     `;
-
-    
   });
   return document.querySelectorAll('.comment-btn');
 };
