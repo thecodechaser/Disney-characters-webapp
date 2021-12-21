@@ -1,3 +1,4 @@
-import _ from "lodash";
-import "./style.css";
+import './style.css';
+import { render } from './utils/homePage.js';
 
+render();
