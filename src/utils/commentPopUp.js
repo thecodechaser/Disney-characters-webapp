@@ -65,7 +65,16 @@ export default async () => {
           'Content-type': 'application/json; charset=UTF-8',
         },
       });
-     
+      response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/byg3KtvqOhmd3Xt9Axu5/comments?item_id=item${dataID}`);
+      comments = await response.json();
+      commentsContainer.innerHTML =``;
+      comments.forEach((element) => {
+        commentsContainer.innerHTML += `
+              <div class="comment"><p class="comment-date">${element.creation_date}</p>
+              <p class="comment-user-name">${element.username}:</p>
+              <p class="comment-value">${element.comment}</p>
+              </div>`;
+      });
       form.reset();
       })
 
