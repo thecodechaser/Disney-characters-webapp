@@ -77,7 +77,7 @@ export default async () => {
               <p class="comment-value">${element.comment}</p>
               </div>`;
         });
-        commentsCounter.innerHTML =`Comments(${comments.length})`;
+        commentsCounter.innerHTML = `Comments(${comments.length})`;
         form.reset();
       });
 
