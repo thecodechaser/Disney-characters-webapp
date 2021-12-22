@@ -53,8 +53,14 @@ header {
 }
 
 .fa-heart {
+  cursor: pointer;
   margin-top: 5px;
-  font-size: 20px;
+  font-size: 25px;
+  color: #000;
+}
+
+.fa-heart:hover {
+  color: #f72585;
 }
 
 .likes {
