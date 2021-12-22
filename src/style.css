@@ -92,7 +92,6 @@ header {
 
 .main-popup-container {
   margin: 50px 100px;
-  height: 85%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -120,4 +119,9 @@ header {
 .popup-details {
   display: flex;
   gap: 100px;
+}
+
+.comment {
+  display: flex;
+  gap: 10px;
 }
