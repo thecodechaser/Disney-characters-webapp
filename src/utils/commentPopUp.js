@@ -28,12 +28,20 @@ export default async () => {
             <p class="popup-info">Video Games: ${chaArray[dataID].videoGames.length}</p>
             <p class="popup-info">Enemies: ${chaArray[dataID].enemies.length}</p>
             </div>
+            <h3 class="comment-heading">Comments</h3>
             <div class="comments-container">
             </div>
             </div>
             `;
 
-           
+      const commentsContainer = document.querySelector('.comments-container');
+      comments.forEach((element) => {
+        commentsContainer.innerHTML += `
+              <div class="comment"><p class="comment-date">${element.creation_date}</p>
+              <p class="comment-user-name">${element.username}:</p>
+              <p class="comment-value">${element.comment}</p>
+              </div>`;
+      });
 
       container.style.display = 'block';
 
