@@ -13,8 +13,8 @@ export default async () => {
   commentButton.forEach((element) => {
     const dataID = element.getAttribute('data-id');
     element.addEventListener('click', async () => {
-      const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/byg3KtvqOhmd3Xt9Axu5/comments?item_id=item${dataID}`);
-      const comments = await response.json();
+      let response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/byg3KtvqOhmd3Xt9Axu5/comments?item_id=item${dataID}`);
+      let comments = await response.json();
       container.innerHTML = `
             <div class="main-popup-container">
             <img class="popup-image" src="${chaArray[dataID].imageUrl}" alt="character-image"/>
@@ -31,6 +31,12 @@ export default async () => {
             <h3 class="comment-heading">Comments</h3>
             <div class="comments-container">
             </div>
+            <h3 class="add-comment">Add a comment</3>
+            <form class="comment-form">
+            <input type="text" required name"name" placeholder="Your name">
+            <input type="text" required name="comment" placeholder="Your insights">
+            <button type="submit" class="submit-comment">Comment</button>
+            </form>
             </div>
             `;
 
@@ -41,6 +47,35 @@ export default async () => {
               <p class="comment-user-name">${element.username}:</p>
               <p class="comment-value">${element.comment}</p>
               </div>`;
+      });
+
+      const form = document.querySelector('.comment-form');
+      form.addEventListener('submit', async (event) => {
+        const UserName = form.elements[0].value;
+        const UserComment = form.elements[1].value;
+        event.preventDefault();
+        await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/byg3KtvqOhmd3Xt9Axu5/comments', {
+          method: 'POST',
+          body: JSON.stringify({
+            item_id: `item${dataID}`,
+            username: UserName,
+            comment: UserComment,
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        });
+        response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/byg3KtvqOhmd3Xt9Axu5/comments?item_id=item${dataID}`);
+        comments = await response.json();
+        commentsContainer.innerHTML = '';
+        comments.forEach((element) => {
+          commentsContainer.innerHTML += `
+              <div class="comment"><p class="comment-date">${element.creation_date}</p>
+              <p class="comment-user-name">${element.username}:</p>
+              <p class="comment-value">${element.comment}</p>
+              </div>`;
+        });
+        form.reset();
       });
 
       container.style.display = 'block';
