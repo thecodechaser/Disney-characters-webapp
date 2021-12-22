@@ -59,6 +59,10 @@ header {
   color: #000;
 }
 
+.fa-heart:hover {
+  color: #f72585;
+}
+
 .likes {
   margin-left: 200px;
 }
