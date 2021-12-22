@@ -15,11 +15,12 @@ export default async () => {
     element.addEventListener('click', async () => {
       let response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/byg3KtvqOhmd3Xt9Axu5/comments?item_id=item${dataID}`);
       let comments = await response.json();
+      const title = chaArray[dataID].name.substring(0, 15);
       container.innerHTML = `
             <div class="main-popup-container">
             <img class="popup-image" src="${chaArray[dataID].imageUrl}" alt="character-image"/>
             <i class="fas fa-times"></i>
-            <h3 class="popup-title">${chaArray[dataID].name}</h3>
+            <h3 class="popup-title">${title}</h3>
             <div class="popup-details">
             <p class="popup-info">Films: ${chaArray[dataID].films.length}</p>
             <p class="popup-info">TV Shows: ${chaArray[dataID].tvShows.length}</p>
@@ -28,13 +29,13 @@ export default async () => {
             <p class="popup-info">Video Games: ${chaArray[dataID].videoGames.length}</p>
             <p class="popup-info">Enemies: ${chaArray[dataID].enemies.length}</p>
             </div>
-            <h3 class="comment-heading">Comments</h3>
+            <h3 class="comment-heading">Comments(${comments.length})</h3>
             <div class="comments-container">
             </div>
             <h3 class="add-comment">Add a comment</3>
             <form class="comment-form">
-            <input type="text" required name"name" placeholder="Your name">
-            <input type="text" required name="comment" placeholder="Your insights">
+            <input type="text" required name"name" placeholder="Your name" maxlength="20">
+            <input type="text" required name="comment" placeholder="Your insights" maxlength="50">
             <button type="submit" class="submit-comment">Comment</button>
             </form>
             </div>
