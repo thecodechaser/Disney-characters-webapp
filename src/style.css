@@ -131,3 +131,13 @@ header {
   display: flex;
   gap: 10px;
 }
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.submit-comment {
+  align-self: flex-start;
+}
