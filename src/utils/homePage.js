@@ -19,5 +19,22 @@ export default async () => {
    </div>
     `;
   });
+  const likeButton= document.querySelectorAll('.fa-heart');
+  const likeContainer= document.querySelectorAll('.likes');
+  likeButton.forEach((element, index)=>{
+    const item_id= `item${index}`;
+    element.addEventListener('click', async () => {
+       await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/byg3KtvqOhmd3Xt9Axu5/likes', {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+    })
+  })
+
   return document.querySelectorAll('.comment-btn');
 };
