@@ -1,5 +1,5 @@
 import render from './homePage.js';
-import getCharData from './retrieveApis.js';
+import { getCharData } from './retrieveApis.js';
 
 const closePopup = () => {
   const container = document.querySelector('.comment-popup');
