@@ -35,7 +35,7 @@ export default async () => {
             <h3 class="add-comment">Add a comment</3>
             <form class="comment-form">
             <input type="text" required name"name" placeholder="Your name" maxlength="20">
-            <input type="text" required name="comment" placeholder="Your insights" maxlength="50">
+            <input type="text" required name="comment" placeholder="Your insights" maxlength="40">
             <button type="submit" class="submit-comment">Comment</button>
             </form>
             </div>
@@ -51,6 +51,7 @@ export default async () => {
       });
 
       const form = document.querySelector('.comment-form');
+      const commentsCounter = document.querySelector('.comment-heading');
       form.addEventListener('submit', async (event) => {
         const UserName = form.elements[0].value;
         const UserComment = form.elements[1].value;
@@ -76,6 +77,7 @@ export default async () => {
               <p class="comment-value">${element.comment}</p>
               </div>`;
         });
+        commentsCounter.innerHTML =`Comments(${comments.length})`;
         form.reset();
       });
 
