@@ -1,6 +1,5 @@
-import { getCharData, getCharLikes }  from './retrieveApis.js';
+import { getCharData, getCharLikes } from './retrieveApis.js';
 
- 
 export default async () => {
   const charArray = await getCharData();
   const likeArray = await getCharLikes();
