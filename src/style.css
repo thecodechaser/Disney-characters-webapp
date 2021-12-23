@@ -10,6 +10,7 @@ body {
 /* header-section-style */
 
 header {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -18,19 +19,35 @@ header {
   height: 90px;
 }
 
-.top-menu {
-  display: flex;
-  list-style-type: none;
-  gap: 20px;
-  margin-top: 25px;
-  margin-left: 40px;
+.top-qoute-container {
+  background-color: #fcd5ce;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border: 2px solid #023e8a;
 }
 
-.menu-item {
-  font-size: 20px;
+.top-qoute {
+  font-weight: bold;
+  color: #023e8a;
 }
 
 /* main-section-section */
+
+.c-counter-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.c-counter {
+  color: #e45c3a;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
 
 .cards {
   display: flex;
@@ -42,7 +59,7 @@ header {
 .card {
   background-color: #fcd5ce;
   padding: 15px 30px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border: 2px solid #023e8a;
 }
@@ -95,7 +112,14 @@ header {
 /* footer-section-style */
 
 .fotter {
+  margin-top: 50px;
   text-align: center;
+}
+
+.footer-link {
+  color: #e45c3a;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* comment-popup-style */
@@ -114,7 +138,7 @@ header {
 }
 
 .main-popup-container {
-  margin: 50px 250px;
+  margin: 30px 20px;
   background-color: #ffe8d6;
   display: flex;
   flex-direction: column;
@@ -124,8 +148,8 @@ header {
 
 .fa-times {
   position: absolute;
-  top: 65px;
-  right: 275px;
+  top: 40px;
+  right: 50px;
   font-size: 30px;
 }
 
@@ -154,12 +178,12 @@ header {
 
 .comment-heading {
   font-weight: bold;
-  color: #27A599;
+  color: #27a599;
   margin: 10px 0;
 }
 
 .comments-container {
-  color: #27A599;
+  color: #27a599;
   font-size: 16px;
 }
 
@@ -207,4 +231,17 @@ header {
   border-radius: 8px;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+/* desktop-styles */
+
+@media screen and (min-width: 1080px) {
+  .main-popup-container {
+    margin: 50px 250px;
+  }
+
+  .fa-times {
+    top: 65px;
+    right: 275px;
+  }
 }
