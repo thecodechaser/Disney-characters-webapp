@@ -208,7 +208,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-right: 140px;
 }
 
 .user-comment,
