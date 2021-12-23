@@ -15,7 +15,6 @@ export default async () => {
     </div>
     <p class="likes">${likeArray[index].likes} Likes
     </p>
-
     <button class="comment-btn" data-id="${index}" type="button">Comment</button>
    </div>
     `;

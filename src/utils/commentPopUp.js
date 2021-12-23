@@ -32,10 +32,10 @@ export default async () => {
             <h3 class="comment-heading">Comments(${comments.length})</h3>
             <div class="comments-container">
             </div>
-            <h3 class="add-comment">Add a comment</3>
+            <h3 class="add-comment">Add a comment</h3>
             <form class="comment-form">
-            <input type="text" required name"name" placeholder="Your name" maxlength="20">
-            <input type="text" required name="comment" placeholder="Your insights" maxlength="40">
+            <input class="user-name" type="text" required name"name" placeholder="Your name" maxlength="20">
+            <textarea cols="30" rows="5" class="user-comment" type="text" required name="comment" placeholder="Your insights" maxlength="40"></textarea>
             <button type="submit" class="submit-comment">Comment</button>
             </form>
             </div>

@@ -44,6 +44,7 @@ header {
   padding: 15px 30px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  border: 2px solid #023e8a;
 }
 
 .c-img {
@@ -80,13 +81,14 @@ header {
 }
 
 .comment-btn {
+  font-size: 14px;
   background-color: #0096c7;
   color: #edf6f9;
-  margin-left: 86px;
-  border: 2px solid #000;
+  margin-left: 80px;
+  border: 2px solid #457b9d;
   cursor: pointer;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: bold;
 }
 
@@ -107,52 +109,102 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #c1c7d0e5;
+  background-color: #a8dadcc7;
   backdrop-filter: blur(2px);
 }
 
 .main-popup-container {
-  margin: 50px 100px;
-  background-color: #fff;
+  margin: 50px 250px;
+  background-color: #ffe8d6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #000;
+  border: 2px solid #023e8a;
 }
 
 .fa-times {
   position: absolute;
-  top: 70px;
-  right: 120px;
+  top: 65px;
+  right: 275px;
   font-size: 30px;
 }
 
 .popup-image {
   height: 250px;
-  width: 408px;
+  width: 300px;
   margin-top: 20px;
 }
 
 .popup-title {
   font-size: 30px;
+  margin: 0;
+  color: #023e8a;
 }
 
 .popup-details {
   display: flex;
-  gap: 100px;
+  gap: 200px;
+  color: #023e8a;
+  font-weight: bold;
+}
+
+.popup-info {
+  margin: 8px 0;
+}
+
+.comment-heading {
+  font-weight: bold;
+  color: #27A599;
+  margin: 10px 0;
+}
+
+.comments-container {
+  color: #27A599;
+  font-size: 16px;
 }
 
 .comment {
   display: flex;
-  gap: 10px;
+  gap: 15px;
+}
+
+.comment-user-name,
+.comment-date,
+.comment-value {
+  margin: 5px 0;
+}
+
+.add-comment {
+  margin: 15px;
+  font-weight: bold;
+  color: #0096c7;
 }
 
 .comment-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-right: 140px;
+}
+
+.user-comment,
+.user-name {
+  resize: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #0096c7;
+  outline: none;
 }
 
 .submit-comment {
   align-self: flex-start;
+  font-size: 14px;
+  background-color: #0096c7;
+  color: #edf6f9;
+  border: 2px solid #457b9d;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
