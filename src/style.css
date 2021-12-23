@@ -4,43 +4,69 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #a8dadc;
 }
 
 /* header-section-style */
 
 header {
+  margin-top: 10px;
   display: flex;
-  margin-left: 200px;
+  justify-content: center;
 }
 
 .logo-top {
   height: 90px;
 }
 
-.top-menu {
-  display: flex;
-  list-style-type: none;
-  gap: 20px;
-  margin-top: 25px;
-  margin-left: 40px;
+.top-qoute-container {
+  background-color: #fcd5ce;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border: 2px solid #023e8a;
 }
 
-.menu-item {
-  font-size: 20px;
+.top-qoute {
+  font-weight: bold;
+  color: #023e8a;
 }
 
 /* main-section-section */
 
+.c-counter-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.c-counter {
+  color: #e45c3a;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
 .cards {
-  margin: 50px 100px;
   display: flex;
   gap: 80px;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fcd5ce;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border: 2px solid #023e8a;
 }
 
 .c-img {
-  height: 300px;
-  width: 258px;
+  height: 270px;
+  width: 260px;
 }
 
 .title-like {
@@ -48,6 +74,7 @@ header {
 }
 
 .char-title {
+  color: #023e8a;
   margin: 0;
   width: 90%;
 }
@@ -56,7 +83,7 @@ header {
   cursor: pointer;
   margin-top: 5px;
   font-size: 25px;
-  color: #000;
+  color: #023e8a;
 }
 
 .fa-heart:hover {
@@ -64,21 +91,35 @@ header {
 }
 
 .likes {
-  margin-left: 200px;
+  color: #023e8a;
+  font-weight: bold;
+  margin: 10px;
+  margin-left: 190px;
 }
 
 .comment-btn {
-  margin-left: 84px;
-  border: 2px solid #000;
+  font-size: 14px;
+  background-color: #0096c7;
+  color: #edf6f9;
+  margin-left: 80px;
+  border: 2px solid #457b9d;
   cursor: pointer;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 /* footer-section-style */
 
 .fotter {
+  margin-top: 50px;
   text-align: center;
+}
+
+.footer-link {
+  color: #e45c3a;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* comment-popup-style */
@@ -92,52 +133,115 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #c1c7d0e5;
+  background-color: #a8dadcc7;
   backdrop-filter: blur(2px);
 }
 
 .main-popup-container {
-  margin: 50px 100px;
-  background-color: #fff;
+  margin: 30px 20px;
+  background-color: #ffe8d6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #000;
+  border: 2px solid #023e8a;
 }
 
 .fa-times {
   position: absolute;
-  top: 70px;
-  right: 120px;
+  top: 40px;
+  right: 50px;
   font-size: 30px;
 }
 
 .popup-image {
   height: 250px;
-  width: 408px;
+  width: 300px;
   margin-top: 20px;
 }
 
 .popup-title {
   font-size: 30px;
+  margin: 0;
+  color: #023e8a;
 }
 
 .popup-details {
   display: flex;
-  gap: 100px;
+  gap: 200px;
+  color: #023e8a;
+  font-weight: bold;
+}
+
+.popup-info {
+  margin: 8px 0;
+}
+
+.comment-heading {
+  font-weight: bold;
+  color: #27a599;
+  margin: 10px 0;
+}
+
+.comments-container {
+  color: #27a599;
+  font-size: 16px;
 }
 
 .comment {
   display: flex;
-  gap: 10px;
+  gap: 15px;
+}
+
+.comment-user-name,
+.comment-date,
+.comment-value {
+  margin: 5px 0;
+}
+
+.add-comment {
+  margin: 15px;
+  font-weight: bold;
+  color: #0096c7;
 }
 
 .comment-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-right: 140px;
+}
+
+.user-comment,
+.user-name {
+  resize: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #0096c7;
+  outline: none;
 }
 
 .submit-comment {
   align-self: flex-start;
+  font-size: 14px;
+  background-color: #0096c7;
+  color: #edf6f9;
+  border: 2px solid #457b9d;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* desktop-styles */
+
+@media screen and (min-width: 1080px) {
+  .main-popup-container {
+    margin: 50px 250px;
+  }
+
+  .fa-times {
+    top: 65px;
+    right: 275px;
+  }
 }
