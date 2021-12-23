@@ -2,7 +2,7 @@ import { getCharData, getCharLikes } from './retrieveApis.js';
 
 export default async () => {
   const charArray = await getCharData();
-  const likeArray = await getCharLikes();
+  let likeArray = await getCharLikes();
   const container = document.querySelector('.cards');
   charArray.forEach((element, index) => {
     const title = element.name.substring(0, 15);
@@ -33,7 +33,8 @@ export default async () => {
           'Content-type': 'application/json; charset=UTF-8',
         },
       });
-      likeContainer[index].innerHTML = `${likeArray[index].likes + 1} Likes`;
+      likeArray = await getCharLikes();
+      likeContainer[index].innerHTML = `${likeArray[index].likes} Likes`;
     });
   });
 
