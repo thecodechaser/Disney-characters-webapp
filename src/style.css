@@ -4,13 +4,14 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #a8dadc;
 }
 
 /* header-section-style */
 
 header {
   display: flex;
-  margin-left: 200px;
+  justify-content: center;
 }
 
 .logo-top {
@@ -32,15 +33,22 @@ header {
 /* main-section-section */
 
 .cards {
-  margin: 50px 100px;
   display: flex;
   gap: 80px;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fcd5ce;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
 .c-img {
-  height: 300px;
-  width: 258px;
+  height: 270px;
+  width: 260px;
 }
 
 .title-like {
@@ -48,6 +56,7 @@ header {
 }
 
 .char-title {
+  color: #023e8a;
   margin: 0;
   width: 90%;
 }
@@ -56,7 +65,7 @@ header {
   cursor: pointer;
   margin-top: 5px;
   font-size: 25px;
-  color: #000;
+  color: #023e8a;
 }
 
 .fa-heart:hover {
@@ -64,15 +73,21 @@ header {
 }
 
 .likes {
-  margin-left: 200px;
+  color: #023e8a;
+  font-weight: bold;
+  margin: 10px;
+  margin-left: 190px;
 }
 
 .comment-btn {
-  margin-left: 84px;
+  background-color: #0096c7;
+  color: #edf6f9;
+  margin-left: 86px;
   border: 2px solid #000;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 /* footer-section-style */
