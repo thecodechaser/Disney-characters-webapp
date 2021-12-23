@@ -5,11 +5,12 @@ export default async () => {
   const likeArray = await getCharLikes();
   const container = document.querySelector('.cards');
   charArray.forEach((element, index) => {
+    const title = element.name.substring(0, 15);
     container.innerHTML += `
     <div class="card">
     <img class="c-img" src="${element.imageUrl}" alt="character image"/>
     <div class="title-like">
-      <h3 class="char-title">${element.name}</h3>
+      <h3 class="char-title">${title}</h3>
       <i class="far fa-heart"></i>
     </div>
     <p class="likes">${likeArray[index].likes} Likes
