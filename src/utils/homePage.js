@@ -14,7 +14,7 @@ export default async () => {
       <i class="far fa-heart"></i>
     </div>
     <p class="likes">${likeArray[index].likes} Likes
-    </p>
+    </p>                                    
     <button class="comment-btn" data-id="${index}" type="button">Comment</button>
    </div>
     `;

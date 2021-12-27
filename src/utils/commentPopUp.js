@@ -18,6 +18,7 @@ export default async () => {
       const title = chaArray[dataID].name.substring(0, 15);
       container.innerHTML = `
             <div class="main-popup-container">
+            <div class="popup-pc1">
             <img class="popup-image" src="${chaArray[dataID].imageUrl}" alt="character-image"/>
             <i class="fas fa-times"></i>
             <h3 class="popup-title">${title}</h3>
@@ -29,6 +30,8 @@ export default async () => {
             <p class="popup-info">Video Games: ${chaArray[dataID].videoGames.length}</p>
             <p class="popup-info">Enemies: ${chaArray[dataID].enemies.length}</p>
             </div>
+            </div>
+            <div class="popup-pc2">
             <h3 class="comment-heading">Comments(${comments.length})</h3>
             <div class="comments-container">
             </div>
@@ -38,6 +41,7 @@ export default async () => {
             <textarea cols="30" rows="5" class="user-comment" type="text" required name="comment" placeholder="Your insights" maxlength="40"></textarea>
             <button type="submit" class="submit-comment">Comment</button>
             </form>
+            </div>
             </div>
             `;
 

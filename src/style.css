@@ -64,6 +64,12 @@ header {
   border: 2px solid #023e8a;
 }
 
+.card:hover {
+  transition: 1s ease-in-out;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 .c-img {
   height: 270px;
   width: 260px;
@@ -151,6 +157,14 @@ header {
   top: 40px;
   right: 50px;
   font-size: 30px;
+  color: #023e8a;
+}
+
+.popup-pc1,
+.popup-pc2 {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
 }
 
 .popup-image {
@@ -163,11 +177,12 @@ header {
   font-size: 30px;
   margin: 0;
   color: #023e8a;
+  text-align: center;
 }
 
 .popup-details {
   display: flex;
-  gap: 200px;
+  gap: 100px;
   color: #023e8a;
   font-weight: bold;
 }
@@ -180,11 +195,17 @@ header {
   font-weight: bold;
   color: #27a599;
   margin: 10px 0;
+  text-align: center;
 }
 
 .comments-container {
   color: #27a599;
   font-size: 16px;
+  overflow-y: scroll;
+  max-height: 150px;
+  border: 2px solid #27a599;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .comment {
@@ -202,6 +223,7 @@ header {
   margin: 15px;
   font-weight: bold;
   color: #0096c7;
+  text-align: center;
 }
 
 .comment-form {
@@ -237,10 +259,26 @@ header {
 @media screen and (min-width: 1080px) {
   .main-popup-container {
     margin: 50px 250px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    padding: 50px 0;
   }
 
   .fa-times {
     top: 65px;
     right: 275px;
+  }
+
+  .popup-details {
+    gap: 80px;
+  }
+
+  .popup-pc1,
+  .popup-pc2 {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
