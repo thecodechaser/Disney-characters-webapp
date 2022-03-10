@@ -68,7 +68,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Roshan Bajgain**
 
-- GitHub: [@githubhandle](https://github.com/roshan-bajgain)
+- GitHub: [@roshan-bajgain](https://github.com/roshan-bajgain)
+- Twitter: [@RoshanBajgain10](https://twitter.com/RoshanBajgain10)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/roshan-bazgain/)
 
 ## 🤝 Contributing
 
